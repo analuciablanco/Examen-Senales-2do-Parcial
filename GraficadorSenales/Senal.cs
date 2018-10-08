@@ -70,12 +70,21 @@ namespace GraficadorSenales
 
         public void truncar(double umbral)
         {
-            //por cara muestra se va a realizar esto
+            //por cada muestra se va a realizar esto
             foreach (Muestra muestra in Muestras)
             {
-                //
                 if (muestra.y > umbral) muestra.y = umbral;
                 else if (muestra.y < (umbral * -1)) muestra.y = umbral * -1;
+            }
+        }
+
+        public void potencia(double n)
+        {
+            foreach (Muestra muestra in Muestras)
+            {
+                if (muestra.y > 0) muestra.y = Math.Pow(muestra.y, n);
+                else if (muestra.y < 0) muestra.y = -(Math.Pow(muestra.y, n));
+                else muestra.y = 0;
             }
         }
     }

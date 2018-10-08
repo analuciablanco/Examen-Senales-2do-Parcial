@@ -74,6 +74,9 @@ namespace GraficadorSenales
             //Truncar
             double factorTruncar = double.Parse(txtUmbral.Text);
             senal.truncar(factorTruncar);
+            //Potencia
+            double factorPotencia = double.Parse(txtPotencia.Text);
+            senal.potencia(factorPotencia);
 
             //Limpia la gráfica
             plnGrafica.Points.Clear();
@@ -160,6 +163,16 @@ namespace GraficadorSenales
         {
             txtUmbral.IsEnabled = false;
             txtUmbral.Text = "1";
+        }
+
+        private void cbPotencia_Checked(object sender, RoutedEventArgs e)
+        {
+            txtPotencia.IsEnabled = true;
+        }
+        private void cbPotencia_UnChecked(object sender, RoutedEventArgs e)
+        {
+            txtPotencia.IsEnabled = false;
+            txtPotencia.Text = "1";
         }
     }
 }

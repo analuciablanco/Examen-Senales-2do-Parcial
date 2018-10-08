@@ -8,8 +8,8 @@
         Title="MainWindow" Height="555.525" Width="924">
     <Grid HorizontalAlignment="Left" Width="916" Margin="0,0,0,6">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="149*"/>
+            <ColumnDefinition Width="313*"/>
+            <ColumnDefinition Width="603*"/>
         </Grid.ColumnDefinitions>
         <TextBlock HorizontalAlignment="Left" Margin="18,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="120" Height="32" Text="Tiempo inicial:"/>
         <TextBox x:Name="txtTiempoInicial" HorizontalAlignment="Left" Height="32" Margin="156,18,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" FontSize="16"/>
@@ -25,11 +25,11 @@
                 <Polyline Name="plnEjeY" Stroke="Gray" StrokeThickness="1"/>
             </Grid>
         </ScrollViewer>
-        <TextBlock x:Name="lblAmplitudMaximaY" HorizontalAlignment="Left" Margin="18,213,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="15" Width="21"/>
-        <TextBlock x:Name="lblAmplitudMaximaY_Negativa" HorizontalAlignment="Left" Margin="18,473,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="15" Width="21"/>
-        <TextBlock x:Name="lblAmplitudCero" HorizontalAlignment="Left" Margin="10,352,0,0" TextWrapping="Wrap" Text="-0-" VerticalAlignment="Top" FontSize="15" Width="21" RenderTransformOrigin="0.524,9.05"/>
-        <StackPanel x:Name="panelConfiguracion" HorizontalAlignment="Left" Margin="171,10,0,0" VerticalAlignment="Top" Height="150" Width="276" Grid.Column="1"/>
-        <ComboBox x:Name="cbTipoSenal" SelectedIndex="0" HorizontalAlignment="Left" Margin="18,177,0,0" VerticalAlignment="Top" Width="258" SelectionChanged="cbTipoSenal_SelectionChanged">
+        <TextBlock x:Name="lblAmplitudMaximaY" HorizontalAlignment="Left" Margin="18,213,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="15" Width="21" Height="20"/>
+        <TextBlock x:Name="lblAmplitudMaximaY_Negativa" HorizontalAlignment="Left" Margin="18,473,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="15" Width="21" Height="20"/>
+        <TextBlock x:Name="lblAmplitudCero" HorizontalAlignment="Left" Margin="10,352,0,0" TextWrapping="Wrap" Text="-0-" VerticalAlignment="Top" FontSize="15" Width="21" RenderTransformOrigin="0.524,9.05" Height="20"/>
+        <StackPanel x:Name="panelConfiguracion" HorizontalAlignment="Left" Margin="315,10,0,0" VerticalAlignment="Top" Height="150" Width="276" Grid.Column="1"/>
+        <ComboBox x:Name="cbTipoSenal" SelectedIndex="0" HorizontalAlignment="Left" Margin="18,177,0,0" VerticalAlignment="Top" Width="258" SelectionChanged="cbTipoSenal_SelectionChanged" Height="22">
             <ComboBoxItem>Senoidal</ComboBoxItem>
             <ComboBoxItem>Rampa</ComboBoxItem>
             <ComboBoxItem>Exponencial</ComboBoxItem>
@@ -44,6 +44,9 @@
         <TextBox x:Name="txtUmbral" HorizontalAlignment="Right" Height="27" Margin="0,139,448,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="122" IsEnabled="False" Grid.Column="1" FontSize="16"/>
         <TextBlock HorizontalAlignment="Left" Margin="4,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="144" Height="32" RenderTransformOrigin="1.2,0.875" Grid.Column="1"><Run Text="Umbral"/><Run Text=":"/></TextBlock>
         <CheckBox x:Name="cbUmbral" Content="" HorizontalAlignment="Left" Margin="6,145,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.488,-0.227" Checked="cbUmbral_Checked" Unchecked="cbUmbral_UnChecked" Grid.Column="1" Height="24" Width="23"/>
+        <TextBox x:Name="txtPotencia" HorizontalAlignment="Right" Height="27" Margin="0,28,293,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="122" IsEnabled="False" Grid.Column="1" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="159,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="144" Height="32" RenderTransformOrigin="1.2,0.875" Grid.Column="1" Text="Potencia:"/>
+        <CheckBox x:Name="cbPotencia" Content="" HorizontalAlignment="Left" Margin="161,34,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.488,-0.227" Grid.Column="1" Height="24" Width="23" Checked="cbPotencia_Checked" Unchecked="cbPotencia_UnChecked"/>
 
 
     </Grid>
